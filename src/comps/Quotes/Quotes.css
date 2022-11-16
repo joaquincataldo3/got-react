@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.quote-global-container {
+    width: 70%;
+    max-width: 920px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 8px;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 0.800rem;
+}
+
+.quote-container {
+    margin-bottom: 0.500rem;
+}
+
+.get-quotes-btn-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.get-quotes-btn {
+    display: flex;
+    justify-content: center;
+    padding: 0.500rem;
+    border: 1px solid #a239ca;
+    transition: border 150ms; 
+}
+
+.get-quotes-btn:hover {
+    font-weight: 900;
+    border: 3px solid #a239ca
+}
+
+@media (min-width: 1000px) {
+    .quote-global-container {
+        font-size: 1rem;
+    }
+
+    .get-quotes-btn {
+        font-size: 1rem;
+    }
+} 
