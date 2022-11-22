@@ -65,7 +65,7 @@ function Continents() {
                             continents.map(continent => {
                                 return (
                                     <>
-                                        <div className='continent-global-container' onClick={() => handleContinentClick(continent.id)}>
+                                        <div className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id && liClick === true})} onClick={() => handleContinentClick(continent.id)}>
                                             <div className='continent-name-arrow-container'>
                                                 <li className='continent-name'> {continent.name} </li>
                                                 <i class='bx bx-chevron-down'></i>

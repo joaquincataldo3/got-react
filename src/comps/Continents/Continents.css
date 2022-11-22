@@ -21,9 +21,15 @@
 
 .continent-global-container {
     width: 100%;
+    padding: 1rem;
     cursor: pointer;
     margin: 0.300rem;
-    border: 1px solid #a239ca;
+    border: 1px solid #0e0b16;
+    transition: border 250ms;
+}
+
+.continent-global-container-active {
+    border: 2px solid #a239ca;
 }
 
 .continent-name {
