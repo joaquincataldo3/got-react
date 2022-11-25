@@ -54,9 +54,7 @@ function Quote() {
                                     </div>
 
                                     <div className='quote-info'>
-                                        <p>{quote.character.name}</p>
-                                        <p>{quote.character.house.name ? quote.character.house.name : 'Unknown'}</p>
-
+                                        <p>Said by: {quote.character.name} from {quote.character.house.name ? quote.character.house.name : 'Unknown'}</p>
                                     </div>
                                 </div>
 

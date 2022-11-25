@@ -25,7 +25,7 @@ function Character({ characters, loading }) {
                                     </div>
 
                                     <div className='info-container'>
-                                        <h4 className='character-fullname'> {character.firstName + ' ' + character.lastName} </h4>
+                                        <h5 className='character-fullname'> {character.firstName + ' ' + character.lastName} </h5>
                                     </div>
                                 </div>
                             </Link>

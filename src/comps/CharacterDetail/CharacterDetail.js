@@ -43,7 +43,7 @@ function CharacterDetail() {
                     </div>
 
                     <div className='character-info-container'>
-                        <h4 className='character-fullname'> {singleCharacter.firstName + ' ' + singleCharacter.lastName} </h4>
+                        <h4 className='character-detail-fullname'> {singleCharacter.firstName + ' ' + singleCharacter.lastName} </h4>
                         <ul type="none">
                             <li className='character-detail-info-li'>Title: {singleCharacter.title}</li>
                             <li className='character-detail-info-li'>Family: {singleCharacter.family}</li>
