@@ -35,6 +35,8 @@ function CharacterDetail() {
 
             {
 
+                !loading && 
+
                 <div className='character-card-container'>
                     <div className='character-img-container'>
                         <img src={singleCharacter.imageUrl} />
@@ -43,8 +45,8 @@ function CharacterDetail() {
                     <div className='character-info-container'>
                         <h4 className='character-fullname'> {singleCharacter.firstName + ' ' + singleCharacter.lastName} </h4>
                         <ul type="none">
-                            <li>{singleCharacter.title}</li>
-                            <li>{singleCharacter.family}</li>
+                            <li className='character-detail-info-li'>Title: {singleCharacter.title}</li>
+                            <li className='character-detail-info-li'>Family: {singleCharacter.family}</li>
                         </ul>
                     </div>
                 </div>

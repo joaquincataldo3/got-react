@@ -24,8 +24,8 @@ function Continents() {
     }, [])
 
     const handleContinentClick = (continentId) => {
+        /* setLiClick(!liClick) */
         setselectedContinent(continentId);
-        setLiClick(!liClick)
     }
 
     const continent_descriptions = {
@@ -58,19 +58,19 @@ function Continents() {
 
                 }
                 
-                <div className='continent-container'>
+                <div className='continent-list'>
                     <h4>Continents:</h4>
                     <ul type='none'>
                         {
-                            continents.map(continent => {
+                            continents.map((continent, i) => {
                                 return (
                                     <>
-                                        <div className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id && liClick === true})} onClick={() => handleContinentClick(continent.id)}>
+                                        <div className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id /* && liClick === true */})} onClick={() => handleContinentClick(continent.id)} key={i}>
                                             <div className='continent-name-arrow-container'>
                                                 <li className='continent-name'> {continent.name} </li>
                                                 <i class='bx bx-chevron-down'></i>
                                             </div>
-                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id && liClick === true })}>
+                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id /* && liClick === true */ })}>
                                                 <p>{continent_descriptions[`${continent.id}`]}</p>
                                             </div>
                                         </div>

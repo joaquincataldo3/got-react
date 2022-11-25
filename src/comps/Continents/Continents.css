@@ -10,14 +10,11 @@
     object-fit: contain;
 }
 
-.continent-container {
+.continent-list {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
 
-.continent-container ul {
-    margin-top: 1rem;
-}
 
 .continent-global-container {
     width: 100%;
@@ -54,4 +51,17 @@
     opacity: 100%;
     transform: translateY(0);
     height: auto;
+}
+
+@media (min-width: 820px) {
+
+    .continent-list ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .continent-global-container {
+        width: 80%;
+       
+    }
 }
