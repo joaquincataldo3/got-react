@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 import './Character.css'
 import '../../../LoadingSpinner/LoadingSpinner.css'
 
-function Character({ characters, loading }) {
+function Character(props) {
 
+    const { characters, loading } = props;
 
     return (
         <>

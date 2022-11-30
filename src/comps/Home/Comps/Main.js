@@ -23,8 +23,6 @@ function Main() {
             });
     }, [])
 
-    console.log(characters)
-
     //pagination
     const startIdx = currentPage * charactersPerPage;
     const paginatedCharacters = characters.slice(startIdx, startIdx + charactersPerPage);

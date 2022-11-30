@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 
 
-function Pagination({ charactersPerPage, totalCharacters, paginate, arrowPaginateRigth, arrowPaginateLeft }) {
-    // complete arrow right and arrow left
+function Pagination(props) {
 
     const [activePage, setActivePage] = useState(1);
+    const { charactersPerPage, totalCharacters, paginate, arrowPaginateRigth, arrowPaginateLeft } = props;
 
     const pageNumbers = [];
 
