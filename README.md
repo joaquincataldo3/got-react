@@ -1,6 +1,6 @@
-# Hi there, my name is Joaquin and this is a basic react project.
+# Hi there, my name is Joaquin and this is a React project
 
-This was a challenging project for me where I implemented some React features
+This was one of the first challenging projects for me where I made a SPA using Hooks and some other react features.
 
 Deployed on: https://got-react-xi.vercel.app/
 
