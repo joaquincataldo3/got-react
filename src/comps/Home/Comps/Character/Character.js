@@ -26,7 +26,8 @@ function Character(props) {
                                     </div>
 
                                     <div className='info-container'>
-                                        <h5 className='character-fullname'> {character.firstName + ' ' + character.lastName} </h5>
+                                        <h4 className='character-fullname'> {character.firstName} </h4>
+                                        <h4 className='character-fullname'> {character.lastName} </h4>
                                     </div>
                                 </div>
                             </Link>

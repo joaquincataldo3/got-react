@@ -28,14 +28,14 @@
     justify-content: center;
 }
 
-.character-fullname {
+.character-detail-fullname {
     padding: 1rem 0;
     font-size: 1.2rem;
     font-weight: 900;
     transition: color 150ms;
 }
 
-.character-fullname:hover {
+.character-detail-fullname:hover {
     color: #a239ca;
 }
 
@@ -86,7 +86,7 @@
     }
 
    
-    .character-detail-fullname {
+    .character-detail-detail-fullname {
         font-size: 1.6rem;
     }
 

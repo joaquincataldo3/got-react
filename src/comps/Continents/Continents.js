@@ -24,7 +24,7 @@ function Continents() {
     }, [])
 
     const handleContinentClick = (continentId) => {
-        /* setLiClick(!liClick) */
+        setLiClick(!liClick)
         setselectedContinent(continentId);
     }
 
@@ -65,15 +65,15 @@ function Continents() {
                             continents.map((continent, i) => {
                                 return (
                                     <>
-                                        <div className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id /* && liClick === true */})} onClick={() => handleContinentClick(continent.id)} key={i}>
+                                        <li className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id && liClick === true })} onClick={() => handleContinentClick(continent.id)} key={i}>
                                             <div className='continent-name-arrow-container'>
                                                 <li className='continent-name'> {continent.name} </li>
                                                 <i class='bx bx-chevron-down'></i>
                                             </div>
-                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id /* && liClick === true */ })}>
+                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id && liClick === true  })}>
                                                 <p>{continent_descriptions[`${continent.id}`]}</p>
                                             </div>
-                                        </div>
+                                        </li>
 
                                     </>
                                 )

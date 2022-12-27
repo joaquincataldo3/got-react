@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.not-found-content-container {
+    width: 90%;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 900px;
+} 
+
+.go-back-btn {
+    width: 60%;
+    margin: 3rem auto;
+    border: 1px solid #a239ca;
+}
+
+@media (min-width: 768px) {
+    .go-back-btn {
+        font-size: 1rem;
+    }
+}

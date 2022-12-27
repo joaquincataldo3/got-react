@@ -4,6 +4,7 @@ import Home from './comps/Home/Home';
 import Quotes from './comps/Quotes/Quotes';
 import Continents from './comps/Continents/Continents';
 import CharacterDetail from './comps/CharacterDetail/CharacterDetail';
+import NotFound from './comps/NotFound/NotFound';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Route path ="/continents" element={<Continents />} />
 
       <Route path ="/characters/:characterId" element={<CharacterDetail />} />
+
+      <Route path="*" element={<NotFound />} />
       
     </Routes>
     

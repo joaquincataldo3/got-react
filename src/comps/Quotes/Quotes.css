@@ -9,16 +9,12 @@
 .quote-global-container {
     width: 70%;
     max-width: 920px;
-    border: 1px solid grey;
+    border: 1px solid #a239ca;
     margin: 1rem auto;
     padding: 0.5rem;
     background-color: white;
     font-size: 0.800rem;
-    transition: border 250ms;
-}
 
-.quote-global-container:hover {
-    border: 2px solid #a239ca
 }
 
 .quote-container {
@@ -42,7 +38,7 @@
 
 .get-quotes-btn:hover {
     font-weight: 900;
-    border: 3px solid #a239ca
+    border: 2px solid #a239ca
 }
 
 @media (min-width: 1000px) {

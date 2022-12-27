@@ -33,7 +33,7 @@ function Main() {
     }
 
     //paginate with arrow
-    // COMPLETE
+  
     const arrowPaginateRigth = (currentPage) => {
         setCurrentPage(currentPage + 1)
     }

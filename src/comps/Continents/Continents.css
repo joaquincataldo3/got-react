@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .continent-img {
     width: 80%;
     height: 200px;
@@ -55,11 +61,21 @@
 
 @media (min-width: 820px) {
 
-    .continent-list ul {
-        display: flex;
-        flex-wrap: wrap;
+    .continent-list {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 650px;
     }
 
+    .continent-list ul {
+        width: 100%;
+    }
+
+    .continent-list ul li {
+        width: 100%;
+    }
+
+  
     .continent-global-container {
         width: 80%;
        
