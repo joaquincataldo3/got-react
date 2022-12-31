@@ -39,7 +39,7 @@ function CharacterDetail() {
 
                 <div className='character-card-container'>
                     <div className='character-img-container'>
-                        <img src={singleCharacter.imageUrl} />
+                        <img src={singleCharacter.imageUrl} alt={singleCharacter.firstName + ' ' + singleCharacter.lastName}/>
                     </div>
 
                     <div className='character-info-container'>

@@ -7,7 +7,7 @@ import '../../../LoadingSpinner/LoadingSpinner.css'
 
 function Character(props) {
 
-    const { characters, loading } = props;
+    const { characters, loading} = props;
 
     return (
         <>
@@ -21,6 +21,7 @@ function Character(props) {
                         return (
                             <Link to={`/characters/${character.id}`} key={i}>
                                 <div className='character-card'>
+                                
                                     <div className='img-container'>
                                         <img src={character.imageUrl} alt={`${character.firstName + character.firstName}`} />
                                     </div>

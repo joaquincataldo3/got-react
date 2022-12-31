@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function Main() {
 
             <div className='header-main-container'>
                 <div className='logo-container'>
-                    <img src={logo} />
+                    <img src={logo} alt='got-logo'/>
                 </div>
 
                 <nav className='main-navbar'>

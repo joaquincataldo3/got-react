@@ -5,7 +5,7 @@ import classNames from 'classnames';
 function Pagination(props) {
 
     const [activePage, setActivePage] = useState(1);
-    const { charactersPerPage, totalCharacters, paginate, arrowPaginateRigth, arrowPaginateLeft } = props;
+    const { charactersPerPage, totalCharacters, paginate, arrowPaginateRigth, arrowPaginateLeft, setLoading  } = props;
 
     const pageNumbers = [];
 
@@ -14,23 +14,26 @@ function Pagination(props) {
     }
 
     function toggleClass(pageNumber) {
+        setLoading(true);
         paginate(pageNumber);
         setActivePage(pageNumber);
     }
     
     function arrowRightWithActivePage (activePage){
+        setLoading(true);
         arrowPaginateRigth(activePage);
         setActivePage(activePage + 1);
     }
 
     function arrowLeftWithActivePage (activePage){
+        setLoading(true);
         arrowPaginateLeft(activePage);
         setActivePage(activePage - 1);
     }
 
     return (
         <nav className='pagination-container'>
-            <div className='arrow-container' onClick={() => activePage != 1 && arrowLeftWithActivePage(activePage)}>
+            <div className='arrow-container' onClick={() => activePage !== 1 && arrowLeftWithActivePage(activePage)}>
                 <i class='bx bx-chevron-left'></i>
             </div>
             <ul type='none' className='pagination-ul'>
@@ -47,7 +50,7 @@ function Pagination(props) {
                     })
                 }
             </ul>
-            <div className='arrow-container' onClick={() => pageNumbers[pageNumbers.length - 1] != activePage && arrowRightWithActivePage(activePage)}>
+            <div className='arrow-container' onClick={() => pageNumbers[pageNumbers.length - 1] !== activePage && arrowRightWithActivePage(activePage)}>
                 <i className='bx bx-chevron-right'></i>
             </div>
         </nav>

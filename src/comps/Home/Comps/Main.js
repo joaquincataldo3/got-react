@@ -30,16 +30,21 @@ function Main() {
     // page change
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);    
+        setLoading(false);
     }
 
     //paginate with arrow
   
     const arrowPaginateRigth = (currentPage) => {
-        setCurrentPage(currentPage + 1)
+        setLoading(true);
+        setCurrentPage(currentPage + 1);
+        setLoading(false);
     }
 
     const arrowPaginateLeft = (currentPage) => {
-        setCurrentPage(currentPage - 1)
+        setLoading(true);
+        setCurrentPage(currentPage - 1);
+        setLoading(false);
     }
 
    return (
@@ -50,6 +55,7 @@ function Main() {
          loading={loading}/>
 
          <Pagination 
+         setLoading={setLoading}
          charactersPerPage={charactersPerPage} 
          totalCharacters={characters.length} 
          paginate={paginate} 
