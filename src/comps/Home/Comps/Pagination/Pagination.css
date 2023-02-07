@@ -14,8 +14,7 @@ a {
 .pagination-container {
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin: 1.5rem;
+    margin: 2.5rem;
 }
 
 .pagination-ul {
