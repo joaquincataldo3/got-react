@@ -9,21 +9,22 @@ import NotFound from './comps/NotFound/NotFound';
 function App() {
   return (
 
-    
+
     <Routes>
 
-      <Route path ="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
 
-      <Route path ="/quotes" element={<Quotes />} />
+      <Route path="/quotes" element={<Quotes />} />
 
-      <Route path ="/continents" element={<Continents />} />
+      <Route path="/continents" element={<Continents />} />
 
-      <Route path ="/characters/:characterId" element={<CharacterDetail />} />
+      <Route path="/characters/:characterId" element={<CharacterDetail />} />
 
       <Route path="*" element={<NotFound />} />
-      
+
+
     </Routes>
-    
+
 
   );
 }

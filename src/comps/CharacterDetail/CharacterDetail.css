@@ -58,6 +58,7 @@
     border: 1px solid #a239ca;
     padding: 0.500rem;
     transition: border 150ms;
+    cursor: pointer;
 }
 
 .go-back-btn:hover {
