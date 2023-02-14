@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
-import Header from '../Header/Header';
-
 import './CharacterDetail.css';
 
 
@@ -22,12 +20,9 @@ function CharacterDetail() {
             });
     }, [])
 
-    console.log(singleCharacter)
-
     return (
 
         <>
-            <Header />
 
             {
                 loading && <LoadingSpinner />

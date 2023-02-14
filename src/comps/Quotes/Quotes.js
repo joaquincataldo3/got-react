@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../Header/Header';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 import './Quotes.css'
@@ -34,7 +33,6 @@ function Quote() {
     return (
 
         <>
-            <Header />
 
             {
                 loading && <LoadingSpinner />

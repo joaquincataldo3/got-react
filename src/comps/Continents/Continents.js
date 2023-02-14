@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import gotMap from '../../assets/westerosessos.jpg'
-import Header from '../Header/Header';
 import classNames from 'classnames';
 
 import './Continents.css'
@@ -24,7 +23,6 @@ function Continents() {
     }, [])
 
     const handleContinentClick = (continentId) => {
-        setLiClick(!liClick)
         setselectedContinent(continentId);
     }
 
@@ -42,7 +40,6 @@ function Continents() {
     return (
 
         <>
-            <Header />
 
             <main>
                 {
@@ -65,12 +62,12 @@ function Continents() {
                             continents.map((continent, i) => {
                                 return (
                                     <>
-                                        <li className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id && liClick === true })} onClick={() => handleContinentClick(continent.id)} key={i}>
+                                        <li className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id })} onClick={() => handleContinentClick(continent.id)} key={i}>
                                             <div className='continent-name-arrow-container'>
                                                 <li className='continent-name'> {continent.name} </li>
                                                 <i class='bx bx-chevron-down'></i>
                                             </div>
-                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id && liClick === true  })}>
+                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id  })}>
                                                 <p>{continent_descriptions[`${continent.id}`]}</p>
                                             </div>
                                         </li>

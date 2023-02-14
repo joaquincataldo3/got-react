@@ -8,7 +8,7 @@
     width: 80%;
     height: 200px;
     margin: 3rem auto;
-} 
+}
 
 .continent-img img {
     width: 100%;
@@ -18,7 +18,7 @@
 
 .continent-list {
     width: 80%;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 
 
@@ -28,7 +28,7 @@
     cursor: pointer;
     margin: 0.300rem;
     border: 1px solid #0e0b16;
-    transition: border 250ms;
+    transition: border 100ms;
 }
 
 .continent-global-container-active {
@@ -45,18 +45,14 @@
 }
 
 .dropdown-menu {
-    display: none;
-    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     padding-top: 0.500rem;
-    transform: translateY(-5px);
-    transition: opacity 1500ms ,transform 1500ms;
+    transition: max-height 100ms;
 }
 
 .dropdown-menu-active {
-    display: block;
-    opacity: 100%;
-    transform: translateY(0);
-    height: auto;
+    max-height: 900px;
 }
 
 @media (min-width: 820px) {
@@ -75,9 +71,9 @@
         width: 100%;
     }
 
-  
+
     .continent-global-container {
         width: 80%;
-       
+
     }
 }

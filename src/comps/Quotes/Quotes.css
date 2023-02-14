@@ -9,16 +9,23 @@
 .quote-global-container {
     width: 70%;
     max-width: 920px;
-    border: 1px solid #a239ca;
+    border: 1px solid #0e0b16;
     margin: 1rem auto;
     padding: 0.5rem;
-    background-color: white;
-    font-size: 0.800rem;
+  font-size: 0.800rem;
 
 }
 
 .quote-container {
     margin-bottom: 0.500rem;
+}
+
+.quote-container h4 {
+    font-size: 0.8rem;
+}
+
+.quote-info p {
+    font-size: 0.7rem;
 }
 
 .get-quotes-btn-container {
@@ -32,14 +39,27 @@
     display: flex;
     justify-content: center;
     padding: 0.500rem;
-    border: 1px solid #a239ca;
-    transition: border 150ms; 
+    color: #a239ca;
+    transition: border 100ms; 
+    cursor: pointer;
+    font-size: 0.8rem;
 }
 
 .get-quotes-btn:hover {
     font-weight: 900;
     border: 2px solid #a239ca
 }
+
+@media (min-width: 768px) {
+    .quote-container h4 {
+        font-size: 0.875rem;
+    }
+    
+    .quote-info p {
+        font-size: 0.9rem;
+    }
+} 
+
 
 @media (min-width: 1000px) {
     .quote-global-container {
