@@ -1,9 +1,12 @@
-# Hi there, my name is Joaquin and this is a React project based on Game Of Thrones. 
+# Thanks for checking out this repository
 
-Thank you for checking out this repository.
+This project was deployed on https://got-react-xi.vercel.app/
 
-This was one of the first challenging projects for me where I made a SPA using Hooks and some other react features.
+# Overview
 
-Deployed on: https://got-react-xi.vercel.app/
+This project based on Game of Thrones was built using React, consuming https://thronesapi.com/api/v2/. A manual pagination was made, since it was not originally made on the API.
 
-More projects in https://github.com/joaquincataldo3
+
+Joaquín Cataldo
+Full Stack Developer
+
