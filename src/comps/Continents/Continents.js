@@ -2,15 +2,23 @@ import React, { useEffect, useState } from 'react';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import gotMap from '../../assets/westerosessos.jpg'
 import classNames from 'classnames';
+import { useGlobalContext } from '../../hooks/context';
 
 import './Continents.css'
 
 function Continents() {
 
     const [continents, setContinents] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false)
     const [selectedContinent, setselectedContinent] = useState();
-    const [liClick, setLiClick] = useState(false)
+
+
+    const { renderComp, handleRenderComp, setRenderComp } = useGlobalContext()
+
+    useEffect(() => {
+        handleRenderComp()
+    }, [])
+
 
     useEffect(() => {
         setLoading(true)
@@ -36,6 +44,7 @@ function Continents() {
         3: 'Ulthos is the smallest, the least-known and most obscure of the known worlds four continents. It is located south of Asshai and the Shadow Lands and east of Sothoryos. The continent forms the south-eastern coastline of the Jade Sea'
     }
 
+/*     {classNames('continent-global-container', { 'continent-global-container-active': selectedContinent === continent.id })} */
 
     return (
 
@@ -43,31 +52,29 @@ function Continents() {
 
             <main>
                 {
-                    loading ?
-
-                        <LoadingSpinner />
-
-                        :
-
-                        <div className='continent-img'>
-                            <img src={gotMap} alt='essos-westeros-map' />
-                        </div>
+                    loading && <LoadingSpinner />
 
                 }
-                
-                <div className='continent-list'>
-                    <h4>Continents:</h4>
+
+                :
+
+                <div className={`continent-img ${renderComp && 'continent-img-active'}`} >
+                    <img src={gotMap} alt='essos-westeros-map' />
+                </div>
+
+                <div className={`continent-list ${renderComp && 'continent-list-active'}`}>
+                    <h2 className='continent-title'>Continents:</h2>
                     <ul type='none'>
                         {
                             continents.map((continent, i) => {
                                 return (
                                     <>
-                                        <li className={classNames('continent-global-container', {'continent-global-container-active': selectedContinent === continent.id })} onClick={() => handleContinentClick(continent.id)} key={i}>
+                                        <li className={`continent-container ${selectedContinent === continent.id && 'continent-container-active'}`} onClick={() => handleContinentClick(continent.id)} key={i}>
                                             <div className='continent-name-arrow-container'>
-                                                <li className='continent-name'> {continent.name} </li>
-                                                <i class='bx bx-chevron-down'></i>
+                                                <h3 className={`continent-name ${selectedContinent === continent.id && 'name-active'}`} > {continent.name} </h3>
+                                                <i class={`bx bx-chevron-down ${selectedContinent === continent.id && 'arrow-active'}`}></i>
                                             </div>
-                                            <div className={classNames('dropdown-menu', { 'dropdown-menu-active': selectedContinent === continent.id  })}>
+                                            <div className={`continent-dropdown ${selectedContinent === continent.id && 'dropdown-active'}`}>
                                                 <p>{continent_descriptions[`${continent.id}`]}</p>
                                             </div>
                                         </li>

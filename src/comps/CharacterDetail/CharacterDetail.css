@@ -7,6 +7,12 @@
         margin: 2rem auto;
         border: 1px solid grey;
         background-color: white; 
+        transform: translateX(-100%);
+        transition: transform 150ms;
+}
+
+.card-active {
+    transform: translateX(0);
 }
 
 .character-img-container {
@@ -54,15 +60,18 @@
     padding: 0.500rem;
     border: 0;
     outline: 0;
-    background-color: white;
+    background-color: transparent;
     border: 1px solid #a239ca;
     padding: 0.500rem;
     transition: border 150ms;
     cursor: pointer;
+    color: #a239ca;
+    transition: transform 350ms;
+    font-weight: 700;
 }
 
 .go-back-btn:hover {
-    border: 3px solid #a239ca;
+    transform: translateY(10px);
 }
 
 @media (min-width: 820px) {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import { useGlobalContext } from '../../hooks/context';
 
 import './Quotes.css'
 
@@ -9,6 +10,13 @@ function Quote() {
 
     const [quotes, setQuotes] = useState([])
     const [loading, setLoading] = useState(false);
+
+
+    const { renderComp, handleRenderComp,setRenderComp } = useGlobalContext()
+
+    useEffect(() => {
+        handleRenderComp()
+    }, [])
 
     useEffect(() => {
         setLoading(true)
@@ -40,7 +48,7 @@ function Quote() {
 
             <main>
 
-                <div className='quotes-main-container'>
+                <div className={`quotes-main-container ${renderComp && 'quotes-container-active'}`}>
 
                     {
                         quotes.map(quote => {
@@ -67,7 +75,7 @@ function Quote() {
                 {
                     !loading &&
                     <div className='get-quotes-btn-container'>
-                        <button className='get-quotes-btn' onClick={handleBtnClick}> Get more quotes ! </button>
+                        <button className='get-quotes-btn' onClick={handleBtnClick}> GET MORE QUOTES </button>
                     </div>
                 }
 

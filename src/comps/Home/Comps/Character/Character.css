@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 350ms;
+}
+
+.cards-container-active {
+    transform: translateX(0);
 }
 
 .character-card {
@@ -17,9 +24,9 @@
     min-width: 210px;
     max-height: 400px;
     margin: 2rem;
-    border: 1px solid grey;
+    border: 1px solid rgb(166, 166, 166);
     background-color: white;
-    transition: 150ms transform, 150ms box-shadow;
+    transition: 2s transform, 150ms box-shadow;
 }
 
 .character-card:hover {
@@ -68,6 +75,7 @@
 .character-fullname {
     font-weight: 700;
     font-size: 0.875rem;
+    color: black;
 }
 
 .description-item {

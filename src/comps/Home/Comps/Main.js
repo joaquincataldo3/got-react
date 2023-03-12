@@ -23,17 +23,17 @@ function Main() {
             });
     }, [])
 
-    //pagination
+  
     const startIdx = currentPage * charactersPerPage;
     const paginatedCharacters = characters.slice(startIdx, startIdx + charactersPerPage);
 
-    // page change
+    
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);    
         setLoading(false);
     }
 
-    //paginate with arrow
+
   
     const arrowPaginateRigth = (currentPage) => {
         setLoading(true);

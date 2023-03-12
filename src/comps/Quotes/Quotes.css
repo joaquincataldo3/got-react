@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.quotes-main-container {
+    transform: translateX(-150%);
+    transition: transform 350ms;
+    margin: 3rem auto;
+}
+
+.quotes-container-active {
+    transform: translateX(0);
+}
 
 
 .quote-global-container {
@@ -11,7 +20,7 @@
     max-width: 920px;
     border: 1px solid #0e0b16;
     margin: 1rem auto;
-    padding: 0.5rem;
+    padding: 1rem;
   font-size: 0.800rem;
 
 }
@@ -32,6 +41,8 @@
     display: flex;
     justify-content: center;
     margin: 3rem;
+    border: 0;
+
 }
 
 
@@ -40,15 +51,20 @@
     justify-content: center;
     padding: 0.500rem;
     color: #a239ca;
-    transition: border 100ms; 
     cursor: pointer;
     font-size: 0.8rem;
+    background-color: transparent;
+    border: 0;
+    font-weight: 700;
+    border: 1px solid #a239ca;
+    transition: transform 350ms;
 }
 
 .get-quotes-btn:hover {
-    font-weight: 900;
-    border: 2px solid #a239ca
+   transform: translateY(10px);
 }
+
+
 
 @media (min-width: 768px) {
     .quote-container h4 {

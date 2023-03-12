@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import { useGlobalContext } from '../../hooks/context';
 import './CharacterDetail.css';
+import { render } from '@testing-library/react';
 
 
 function CharacterDetail() {
@@ -9,6 +11,13 @@ function CharacterDetail() {
     const [singleCharacter, setSingleCharacter] = useState({});
     const [loading, setLoading] = useState(false)
     const { characterId } = useParams();
+
+    const { renderComp, handleRenderComp, setRenderComp } = useGlobalContext()
+
+    useEffect(() => {
+        handleRenderComp()
+    }, [])
+
 
     useEffect(() => {
         setLoading(true)
@@ -32,7 +41,7 @@ function CharacterDetail() {
 
                 !loading && 
 
-                <div className='character-card-container'>
+                <div className={`character-card-container ${renderComp && 'card-active'}`}>
                     <div className='character-img-container'>
                         <img src={singleCharacter.imageUrl} alt={singleCharacter.firstName + ' ' + singleCharacter.lastName}/>
                     </div>
@@ -50,9 +59,9 @@ function CharacterDetail() {
 
             {
                 !loading &&
-                <Link to='/'>
+                <Link to='/characters' onClick={() => setRenderComp(false)}>
                     <div className='go-back-btn-container'>
-                        <button className='go-back-btn'> Back to characters </button>
+                        <button className='go-back-btn'> BACK TO CHARACTERS </button>
                     </div>
                 </Link>
             }
